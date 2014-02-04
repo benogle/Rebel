@@ -235,11 +235,12 @@
 	CGRect popoverScreenRect = popoverRect();
 	
 	if (self.shown) {
-		if (self.backgroundView.popoverEdge == popoverEdge) {
-			[self.popoverWindow setFrame:popoverScreenRect display:YES];
-			return;
-		}
-		
+		// This Fs up when the thing grows. It flashes, but whatev.
+		// if (self.backgroundView.popoverEdge == popoverEdge) {
+		// 	[self.popoverWindow setFrame:popoverScreenRect display:YES];
+		// 	return;
+		// }
+
 		[self.popoverWindow close];
 		self.popoverWindow = nil;
 	}
